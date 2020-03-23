@@ -12,10 +12,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = {"com.es.user.rbac.repository"})
 @EnableJpaAuditing
 @EnableDiscoveryClient
-public class ESchoolUserServiceOauth2RbacApplication {
+public class ESchoolServiceUserOauth2RbacApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ESchoolUserServiceOauth2RbacApplication.class, args);
+        SpringApplication.run(ESchoolServiceUserOauth2RbacApplication.class, args);
     }
 
 }

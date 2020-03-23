@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.es</groupId>
-    <artifactId>e-school-user-service-oauth2-rbac</artifactId>
+    <artifactId>e-school-service-user-oauth2-rbac</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>e-school-user-service-oauth2-rbac</name>
+    <name>e-school-service-user-oauth2-rbac</name>
     <description>RBAC（Role-Based Access Control，基于角色的访问控制）</description>
 
     <properties>
