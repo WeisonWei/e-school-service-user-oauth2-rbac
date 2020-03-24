@@ -3,8 +3,7 @@ delete from `tb_role`;
 delete from `tb_role_permission`;
 delete from `tb_user`;
 delete from `tb_user_role`;
-delete from `tb_content`;
-delete from `tb_content_category`;
+
 
 insert into `tb_permission`(`id`, `parent_id`, `name`, `en_name`, `url`, `description`)
 values (37, 0, '系统管理', 'System', '/', NULL),

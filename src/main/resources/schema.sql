@@ -13,8 +13,7 @@ CREATE TABLE IF NOT EXISTS `clientdetails`
     `additionalInformation`  varchar(4096) DEFAULT NULL,
     `autoApproveScopes`      varchar(256)  DEFAULT NULL,
     PRIMARY KEY (`appId`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_access_token`
 (
@@ -26,8 +25,7 @@ CREATE TABLE IF NOT EXISTS `oauth_access_token`
     `authentication`    blob,
     `refresh_token`     varchar(256) DEFAULT NULL,
     PRIMARY KEY (`authentication_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_approvals`
 (
@@ -37,8 +35,7 @@ CREATE TABLE IF NOT EXISTS `oauth_approvals`
     `status`         varchar(10)    DEFAULT NULL,
     `expiresAt`      timestamp NULL DEFAULT NULL,
     `lastModifiedAt` timestamp NULL DEFAULT NULL
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_client_details`
 (
@@ -54,8 +51,7 @@ CREATE TABLE IF NOT EXISTS `oauth_client_details`
     `additional_information`  varchar(4096) DEFAULT NULL,
     `autoapprove`             varchar(256)  DEFAULT NULL,
     PRIMARY KEY (`client_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_client_token`
 (
@@ -65,23 +61,20 @@ CREATE TABLE IF NOT EXISTS `oauth_client_token`
     `user_name`         varchar(256) DEFAULT NULL,
     `client_id`         varchar(256) DEFAULT NULL,
     PRIMARY KEY (`authentication_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_code`
 (
     `code`           varchar(256) DEFAULT NULL,
     `authentication` blob
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_refresh_token`
 (
     `token_id`       varchar(256) DEFAULT NULL,
     `token`          blob,
     `authentication` blob
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 
 -- 用户管理
@@ -103,8 +96,7 @@ CREATE TABLE IF NOT EXISTS `tb_user`
     UNIQUE KEY `name` (`name`) USING BTREE,
     UNIQUE KEY `phone` (`phone`) USING BTREE,
     UNIQUE KEY `email` (`email`) USING BTREE
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 37
+) AUTO_INCREMENT = 37
   DEFAULT CHARSET = utf8 COMMENT ='用户表';
 
 CREATE TABLE IF NOT EXISTS `tb_role`
@@ -119,8 +111,7 @@ CREATE TABLE IF NOT EXISTS `tb_role`
     `created`     datetime     DEFAULT NULL,
     `updated`     datetime     DEFAULT NULL,
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 37
+) AUTO_INCREMENT = 37
   DEFAULT CHARSET = utf8 COMMENT ='角色表';
 
 CREATE TABLE IF NOT EXISTS `tb_permission`
@@ -136,8 +127,7 @@ CREATE TABLE IF NOT EXISTS `tb_permission`
     `created`     datetime     DEFAULT NULL,
     `updated`     datetime     DEFAULT NULL,
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 37
+) AUTO_INCREMENT = 37
   DEFAULT CHARSET = utf8 COMMENT ='权限表';
 
 -- -- relation
@@ -151,8 +141,7 @@ CREATE TABLE IF NOT EXISTS `tb_user_role`
     `created`   datetime   DEFAULT NULL,
     `updated`   datetime   DEFAULT NULL,
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 37
+) AUTO_INCREMENT = 37
   DEFAULT CHARSET = utf8 COMMENT ='用户角色表';
 
 CREATE TABLE IF NOT EXISTS `tb_role_permission`
@@ -165,6 +154,5 @@ CREATE TABLE IF NOT EXISTS `tb_role_permission`
     `created`       datetime   DEFAULT NULL,
     `updated`       datetime   DEFAULT NULL,
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 37
+) AUTO_INCREMENT = 37
   DEFAULT CHARSET = utf8 COMMENT ='角色权限表';
