@@ -1,8 +1,8 @@
 package com.es.user.rbac.repository;/*
 package com.es.user.db.repository;
 
-import com.es.user.entity.User;
-import com.es.user.entity.UserLogin;
+import com.es.user.session.entity.User;
+import com.es.user.session.entity.UserLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
